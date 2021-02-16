@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: hello
+spec:
+  description: 'Hello from Tekton'
+  steps:
+    - name: hello
+      image: ubuntu
+      command:
+        - /bin/bash
+      args: ['-c', 'echo Hello Tekton']
